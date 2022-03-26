@@ -1,0 +1,44 @@
+{
+  "shein组件库": {
+    "key": "shineout",
+    "prefix": "shein",
+    "body": [
+      "import {${1:TM_FILENAME}} from 'shineout';",
+      "${RELATIVE_FILEPATH}",
+      "TM_FILENAME_BASE"
+    ],
+    "description": "导入shein组件库",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "useState": {
+    "key": "useState",
+    "prefix": "useState",
+    "body": [
+      "const [${1:first}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:second})"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "typescriptReactClassComponent": {
+    "key": "typescriptReactClassComponent",
+    "prefix": "tsrcc",
+    "description": "Creates a React component class with ES7 module system and TypeScript interfaces",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "type Props = {}",
+      "",
+      "type State = {}",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {",
+      "  state = {}",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>${1:first}</div>",
+      "    )",
+      "  }",
+      "}"
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  }
+}

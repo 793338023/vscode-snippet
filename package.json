@@ -1,0 +1,64 @@
+{
+  "name": "shein-snippet",
+  "displayName": "shein-snippet",
+  "description": "shein 代码片段",
+  "version": "0.0.2",
+  "license": "MIT",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:shein-snippet.helloWorld"
+  ],
+  "main": "./extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/793338023/vscode-snippet"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "shein-snippet.helloWorld",
+        "title": "shein"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.0.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "14.x",
+    "eslint": "^8.11.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.2.2",
+    "typescript": "^4.5.5",
+    "@vscode/test-electron": "^2.1.3"
+  }
+}
